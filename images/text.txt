@@ -1,0 +1,84 @@
+first part : 
+
+NLP part : 
+
+csv file :
+.iloc(2)
+   column 2    
+     text   
+
+preprocess :
+regex
+input = raw text
+1 - remove urls
+2 - remove hashtags
+3 - remove mentions
+output : cleaned text
+
+filtering : 
+
+if tweets (string) string.find('ta9S') contain the words 'Ta9s ' , 'tawako3at ' keep , else remove
+
+tokenization : 
+input = clean text
+
+output : word : ['word 1' , 'word2'] 
+Tashaphyne , steming
+
+['sakhin', 'barid' , 'sakhin jidan']
+
+keep only word we want (raainy, foggy, etc)
+count()
+
+output : 
+{'rainy' : 21 , 'clear' : 2 ,  'sunny' : 30 , ' foggy' : 2 , 'warm' : 10 , 'cold' : 10 }
+
+
+
+second part : 
+ANN
+Input : {key , value}
+
+for each tweet :
+	tokenize tweet
+        find keywords and count them
+Input ANN : {'rainy' : 21 , 'clear' : 2 ,  'sunny' : 30 , ' foggy' : 2 , 'warm' : 10 , 'cold' : 10 } (rainy,sunny,warm)
+6 values
+*    hidden layers   *
+*
+*                    *
+* 
+*                    *
+*
+
+
+
+Output ANN: Rainy/not rainy,  sunny/foggy , warm/cold
+
+first task : 
+import pandas as pd
+
+data = read_csv('xxx.csv')
+tweets = data.iloc[[1]]
+
+tweet1 = tweets[0]
+print(tweet1)
+
+import re
+re.compile(r"((https?):((//)|(\\\\))+[\w\d:#@%/;$()~_?\+-=\\\.&]*)", re.MULTILINE|re.UNICODE)
+
+task : 
+create a python Checkweathertweet(tweet) : 
+     return True
+for tweet in twets : 
+	if Checkweathertweet(tweet) : 
+               pass
+        else : 
+	      twwets.remove()
+tweets list containg only weather tweets
+
+task : counting how many time keyword repeated	
+
+
+
+
